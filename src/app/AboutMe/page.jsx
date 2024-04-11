@@ -1,7 +1,7 @@
-import Carousel from "@/components/Carousel";
-import Carrossel from "@/components/Carousel";
+import Carousel from "@/components/Carrossel";
 import IconNext from "@/components/SVGs/iconNext";
 import IconNode from "@/components/SVGs/iconNode";
+import IconJava from "@/components/SVGs/iconJava";
 
 const AboutMe = () => {
   return (
@@ -39,6 +39,7 @@ const AboutMe = () => {
           <div className="flex flex-wrap items-center justify-center gap-5 ">
             <IconNode />
             <IconNext />
+            <IconJava/>
           </div>
         </div>
       </div>

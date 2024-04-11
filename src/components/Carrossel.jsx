@@ -7,18 +7,15 @@ import { Pagination, Autoplay } from "swiper/modules";
 
 import IconCss from "@/components/SVGs/iconCss";
 import IconHtml from "@/components/SVGs/iconHtml";
-import IconJava from "@/components/SVGs/iconJava";
 import IconJs from "@/components/SVGs/iconJs";
-import IconNext from "@/components/SVGs/iconNext";
-import IconNode from "@/components/SVGs/iconNode";
 import IconReact from "@/components/SVGs/iconReact";
 import IconTailwind from "@/components/SVGs/iconTailwind";
 
-const Carrossel = () => {
+const Carousel = () => {
   return (
     <>
       <Swiper
-        // slidesPerView={3} para mobile
+      //slidesPerView={3} para mobile e slidesPerView={5} para desktop
         slidesPerView={3}
         spaceBetween={50}
         centeredSlides={true}
@@ -30,7 +27,7 @@ const Carrossel = () => {
         }}
         modules={[Pagination, Autoplay]}
         
-        // obs.: w-80 para mobile e w-[65%] para desktop
+          //w-80 para mobile e w-[65%] para desktop
         className="w-80 flex items-center justify-center"
       >
         <SwiperSlide>
@@ -46,12 +43,6 @@ const Carrossel = () => {
           <IconReact />
         </SwiperSlide>
         <SwiperSlide>
-          <IconNext />
-        </SwiperSlide>
-        <SwiperSlide>
-          <IconNode />
-        </SwiperSlide>
-        <SwiperSlide>
           <IconTailwind />
         </SwiperSlide>
       </Swiper>
@@ -59,4 +50,4 @@ const Carrossel = () => {
   );
 };
 
-export default Carrossel;
+export default Carousel;
