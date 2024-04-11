@@ -1,5 +1,5 @@
 // eslint-disable-next-line no-unused-vars
-import TitleHome from "@/components/title";
+import TitleHome from "@/components/Title";
 import { Button } from "@/components/ui/button";
 import { Linkedin } from "lucide-react";
 import { Github } from "lucide-react";
@@ -20,7 +20,7 @@ function HomeMain() {
           variant="ghost"
           size="icon"
           title="Currículo"
-          className="hover:bg-[#088C37] "
+          className="hover:bg-[#088C37]"
         >
           <ExternalLink />
         </Button>

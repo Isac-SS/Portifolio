@@ -1,4 +1,3 @@
-import TitleHome from "@/components/title";
 import HomeMain from "./home/page";
 import AboutMe from "./AboutMe/page";
 
