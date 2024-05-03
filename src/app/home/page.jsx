@@ -11,8 +11,8 @@ import React from "react";
 function HomeMain() {
   return (
     <Card
-      className="bg-slate-100 flex flex-col justify-center p-16"
-      style={{ height: "calc(100vh - 96px)" }}
+      className="flex flex-col justify-center p-16 bg-transparent"
+      style={{ height: "calc(100vh - 96px)", maxWidth: "1440px", margin: "0 auto" }}
     >
       <TitleHome />
       <div className="flex mt-8 gap-4">
