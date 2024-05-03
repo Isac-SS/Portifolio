@@ -19,7 +19,7 @@ function TopBar() {
   }, []);
 
   return (
-    <div className="flex justify-between items-center min-w-full p-9">
+    <div className="bg-gray-200 shadow-lg flex justify-between items-center min-w-full p-5">
       <h1 className="text-[#141E26] font-extrabold">ISS DEV</h1>
 
       {isMobileView ? (
@@ -31,13 +31,13 @@ function TopBar() {
               Home
             </Link>
           </div>
-          <div className="px-3 text-[#141E26] hover:text-[#75acc2] text-base transition transform hover:">
-            <Link href="/" title="Experiencia">
-              Experiência
+          <div className="px-3 text-[#141E26] hover:text-[#75acc2] text-base transition transform">
+            <Link href="#second-section" title="Sobre mim">
+              Sobre mim
             </Link>
           </div>
           <div className="px-3 text-[#141E26] hover:text-[#75acc2] text-base transition transform">
-            <Link href="/" title="Projetos">
+            <Link href="#section" title="Projetos">
               Projetos
             </Link>
           </div>
