@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "title": "Sports Connect",
+        "description": "App de gerenciamento de atletas e eventos.",
+        "languages":"Ionic, Angular, Scss",
+        "img": "/imgs/images/img1.jpg",
+        "type": "Mobile",
+        "link": "",
+        "icons": ["FaAngular", "FaIonic", "FaScss"]
+    },
+    {
+        "id": 2,
+        "title": "Dr. Luis",
+        "description": "Web site para clínica esteticista.",
+        "languages":"React, Javascript, Scss",
+        "img": "/imgs/images/img2.jpg",
+        "type": "Web site",
+        "link": "",
+        "icons": ["FaReact", "Fajs", "FaScss"]
+    },
+    {
+        "id": 3,
+        "title": "Xadrez",
+        "description": "Jogo de Xadrez.",
+        "languages":"Java",
+        "img": "/imgs/images/img3.jpg",
+        "type": "Comand Line",
+        "link": "",
+        "icons": ["FaJava"]
+    },
+    {
+        "id": 4,
+        "title": "Barber Time",
+        "description": "Web app para agendamento em barbearias.",
+        "languages":"",
+        "img": "/imgs/images/img4.jpg",
+        "type": "Mobile",
+        "link": "",
+        "icons": ["FaReact", "FaTypescript", "FaPrisma", "FaTailwind"]
+    }
+]
