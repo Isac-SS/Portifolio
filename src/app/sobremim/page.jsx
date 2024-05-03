@@ -5,41 +5,37 @@ import IconJava from "@/components/SVGs/iconJava";
 
 const AboutMe = () => {
   return (
-    <div className="bg-slate-200 h-full w-full relative pb-10">
+    <div className="h-full w-full relative pb-10" id="second-section" style={{ maxWidth: "1400px", margin: "0 auto" }}>
       <div className="h-[100%] top-11  m-auto max-w-3xl p-20 text-center flex flex-col items-center gap-10 relative z-10">
         <div className="flex text-3xl md:text-6xl lg:text-7xl xl:text-7xl font-semibold">
           <h1 className="text-gray-800">Quem sou eu</h1>
           <span className="text-red-600">?</span>
         </div>
 
-        <p className="font-semibold ">
+        <p className="font-semibold">
           Desenvolvedor web | Freelance | Backend nas horas vagas
         </p>
 
         <div className="flex flex-col gap-7 font-semibold">
           <p>
-            Desde de 2021, tenho me dedicado intensamente ao desenvolvimento,
-            buscando constantemente ampliar meu conhecimento para contribuir de
-            forma eficaz em diferentes projetos.
-          </p>
-          <p>
-            Embora minha experiência inicial seja mais focada no frontend, venho
-            explorando e trabalhando em diversos projetos full stack, utilizando
-            uma variedade de tecnologias, tanto em projetos pessoais quanto em
-            contextos acadêmicos e profissionais.
+            Iniciei minha trajetória no desenvolvimento Frontend. A partir das necessidades,
+            busquei ampliar meus conhecimentos para o desenvolvimento backend.
+            Atualmente, estou capacitado para contribuir em projetos full stack,
+            utilizando uma variedade de tecnologias. Essa experiência abrange
+            tanto projetos pessoais quanto contextos acadêmicos e profissionais.
           </p>
         </div>
 
         <div className="flex flex-col gap-8">
           <p>Tecnologias</p>
-          <Carousel/>
-          
+          <Carousel />
+
           <p>Estudando</p>
 
           <div className="flex flex-wrap items-center justify-center gap-5 ">
             <IconNode />
             <IconNext />
-            <IconJava/>
+            <IconJava />
           </div>
         </div>
       </div>
