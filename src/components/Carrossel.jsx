@@ -10,6 +10,7 @@ import IconHtml from "@/components/SVGs/iconHtml";
 import IconJs from "@/components/SVGs/iconJs";
 import IconReact from "@/components/SVGs/iconReact";
 import IconTailwind from "@/components/SVGs/iconTailwind";
+import IconSass from "./SVGs/iconSass";
 
 const Carousel = () => {
   return (
@@ -41,6 +42,9 @@ const Carousel = () => {
         </SwiperSlide>
         <SwiperSlide>
           <IconReact />
+        </SwiperSlide>
+        <SwiperSlide>
+          <IconSass />
         </SwiperSlide>
         <SwiperSlide>
           <IconTailwind />
