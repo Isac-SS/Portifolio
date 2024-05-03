@@ -1,8 +1,8 @@
 const IconReact = () => {
   return (
     <svg
-      width="75px"
-      height="75px"
+      width="80px"
+      height="80px"
       viewBox="0 0 24 24"
       fill="#374151"
     >
