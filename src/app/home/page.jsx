@@ -10,53 +10,59 @@ import React from "react";
 
 function HomeMain() {
   return (
-    <Card
-      className="flex flex-col justify-center p-16 bg-transparent"
-      style={{ height: "calc(100vh - 96px)", maxWidth: "1440px", margin: "0 auto" }}
-    >
-      <TitleHome />
-      <div className="flex mt-8 gap-4">
-        <Button
-          variant="ghost"
-          size="icon"
-          title="Currículo"
-          className="hover:bg-[#088C37]"
-        >
-          <ExternalLink />
-        </Button>
-        <Button
-          variant="ghost"
-          size="icon"
-          title="Linkedin"
-          className="hover:bg-[#088C37]"
-        >
-          <a
-            href="https://www.linkedin.com/feed/"
-            title="Linkedin"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:bg-[#088C37]"
+    <Card className="w-screen max-h-screen bg-[#212529]">
+      <Card
+        className="flex flex-col justify-center p-16 bg-[#212529]"
+        style={{
+          height: "calc(100vh - 60px)",
+          maxWidth: "1440px",
+          margin: "0 auto",
+        }}
+      >
+        <TitleHome />
+        <div className="flex mt-8 gap-4">
+          <Button
+            variant="ghost"
+            size="icon"
+            title="Currículo"
+            className="text-white hover:text-[#4c4d4d] hover:bg-[#f0340bc7]"
           >
-            <Linkedin />
-          </a>
-        </Button>
-        <Button
-          variant="ghost"
-          size="icon"
-          title="GitHub"
-          className="hover:bg-[#088C37]"
-        >
-          <a
-            href="https://github.com/Isac-SS/"
+            <ExternalLink />
+          </Button>
+          <Button
+            variant="ghost"
+            size="icon"
             title="Linkedin"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:bg-[#088C37]"
+            className="text-white hover:text-[#4c4d4d] hover:bg-[#f0340bc7]"
           >
-            <Github />
-          </a>
-        </Button>
-      </div>
+            <a
+              href="https://www.linkedin.com/feed/"
+              title="Linkedin"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white hover:text-[#4c4d4d] hover:bg-[#f0340bc7]"
+            >
+              <Linkedin />
+            </a>
+          </Button>
+          <Button
+            variant="ghost"
+            size="icon"
+            title="GitHub"
+            className="text-white hover:text-[#4c4d4d] hover:bg-[#f0340bc7]"
+          >
+            <a
+              href="https://github.com/Isac-SS/"
+              title="Linkedin"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white hover:text-[#4c4d4d] hover:bg-[#f0340bc7]"
+            >
+              <Github />
+            </a>
+          </Button>
+        </div>
+      </Card>
     </Card>
   );
 }

@@ -19,24 +19,24 @@ function TopBar() {
   }, []);
 
   return (
-    <div className="bg-gray-200 shadow-lg flex justify-between items-center min-w-full p-5">
-      <h1 className="text-[#141E26] font-extrabold">ISS DEV</h1>
+    <div className="bg-[#111418] shadow-lg flex justify-between items-center min-w-full p-5">
+      <h1 className="text-[#FAFAFAE6] font-extrabold">ISS DEV</h1>
 
       {isMobileView ? (
         <TopBarMobile />
       ) : (
         <nav className="flex justify-between items-center font-medium">
-          <div className="px-3 text-[#141E26] hover:text-[#75acc2] text-base transition transform">
+          <div className="px-3 text-[#FAFAFAE6] hover:text-[#f0340bc7] text-base transition transform">
             <Link href="/" title="Home">
               Home
             </Link>
           </div>
-          <div className="px-3 text-[#141E26] hover:text-[#75acc2] text-base transition transform">
+          <div className="px-3 text-[#FAFAFAE6] hover:text-[#f0340bc7] text-base transition transform">
             <Link href="#second-section" title="Sobre mim">
               Sobre mim
             </Link>
           </div>
-          <div className="px-3 text-[#141E26] hover:text-[#75acc2] text-base transition transform">
+          <div className="px-3 text-[#FAFAFAE6] hover:text-[#f0340bc7] text-base transition transform">
             <Link href="#section" title="Projetos">
               Projetos
             </Link>
