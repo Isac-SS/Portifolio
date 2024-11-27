@@ -2,47 +2,23 @@ import Carousel from "@/components/Carrossel";
 import IconNext from "@/components/SVGs/iconNext";
 import IconNode from "@/components/SVGs/iconNode";
 import IconJava from "@/components/SVGs/iconJava";
+import { Card } from "@/components/ui/card";
 
 const AboutMe = () => {
   return (
-    <div className="h-full w-full relative pb-10" id="second-section" style={{ maxWidth: "1400px", margin: "0 auto" }}>
-      <div className="h-[100%] top-11  m-auto max-w-3xl p-20 text-center flex flex-col items-center gap-10 relative z-10">
-        <div className="flex text-3xl md:text-6xl lg:text-7xl xl:text-7xl font-semibold">
-          <h1 className="text-gray-800">Quem sou eu</h1>
-          <span className="text-red-600">?</span>
-        </div>
+    <Card className="w-screen max-h-screen bg-[#343A40]" id="second-section">
+      <div class="relative flex items-center justify-center p-24">
+        <h2 className="absolute text-9xl font-bold text-[#6c757d] opacity-10 select-none">SOBRE MIM</h2>
+        <p className="relative text-4xl font-semibold text-[#FAFAFAE6]">Um pouco mais sobre mim</p>
+      </div>
 
-        <p className="font-semibold">
-          Desenvolvedor web | Freelance | Backend nas horas vagas
-        </p>
-
-        <div className="flex flex-col gap-7 font-semibold">
-          <p>
-            Iniciei minha trajetória no desenvolvimento Frontend. A partir das necessidades,
-            busquei ampliar meus conhecimentos para o desenvolvimento backend.
-            Atualmente, estou capacitado para contribuir em projetos full stack,
-            utilizando uma variedade de tecnologias. Essa experiência abrange
-            tanto projetos pessoais quanto contextos acadêmicos e profissionais.
-          </p>
-        </div>
-
-        <div className="flex flex-col gap-8">
-          <p>Tecnologias</p>
-          <Carousel />
-
-          <p>Estudando</p>
-
-          <div className="flex flex-wrap items-center justify-center gap-5 ">
-            <IconNode />
-            <IconNext />
-            <IconJava />
-          </div>
+      <div className="w-auto flex items-center justify-center">
+        <div className="max-w-4xl min-w-96 p-10">
+          <p className="text-[#FAFAFAE6] text-justify ">Eu sou o <span className="text-[#f0340bc7]">Isac Santos de Sá</span> e estou no mercado a 3 anos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, nisi! Alias officiis ducimus, id perferendis minima corporis, possimus quisquam cupiditate laboriosam temporibus deserunt inventore magni quaerat explicabo tempora repellendus incidunt? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero reiciendis accusantium distinctio eveniet aperiam qui quae doloribus praesentium molestias quia. Repellat vel ad obcaecati nihil natus ab adipisci eius aspernatur.</p>
         </div>
       </div>
-      <p className=" text-[4rem] md:text-[6.5rem] lg:text-[8rem] xl:text-[10rem] m-2 font-semibold absolute top-[75px] md:top-[3.3rem] lg:top-9 xl:top-0 left-0 right-0 bottom-90 xl:bottom-100 flex justify-center items-center text-gray-800 opacity-10 z-0">
-        Sobre mim
-      </p>
-    </div>
+
+    </Card>
   );
 };
 
