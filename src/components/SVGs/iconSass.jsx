@@ -2,7 +2,7 @@ const IconSass = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      fill="#374151"
+      fill="#ffff"
       width="78px"
       height="78px"
       viewBox="0 0 32 32"

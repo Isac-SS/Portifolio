@@ -1,7 +1,7 @@
 const IconJava = () => {
   return (
     <svg
-      fill="#374151"
+      fill="#ffff"
       width="70px"
       height="70px"
       viewBox="0 0 32 32"

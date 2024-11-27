@@ -20,7 +20,7 @@ const IconHtml = () => {
         <g
           id="Dribbble-Light-Preview"
           transform="translate(-61.000000, -7639.000000)"
-          fill="#374151"
+          fill="#ffff"
         >
           <g id="icons" transform="translate(56.000000, 160.000000)">
             <path

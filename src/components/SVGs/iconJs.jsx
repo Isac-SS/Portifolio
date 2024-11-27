@@ -6,7 +6,7 @@ const IconJs = () => {
       version="1.1"
       id="Capa_1"
       viewBox="0 0 23.136 23.136"
-      fill="#374151"
+      fill="#ffff"
 
     >
       <g>

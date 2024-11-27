@@ -1,7 +1,7 @@
 const IconTailwind = () => {
   return (
     <svg
-      fill="#374151"
+      fill="#ffff"
       width="80px"
       height="80px"
       viewBox="0 0 24 24"

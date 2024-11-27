@@ -4,7 +4,7 @@ const IconReact = () => {
       width="80px"
       height="80px"
       viewBox="0 0 24 24"
-      fill="#374151"
+      fill="#ffff"
     >
       <title>react</title>
       <rect width="24" height="24" fill="none" />
