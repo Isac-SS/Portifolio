@@ -11,6 +11,9 @@ import IconJs from "@/components/SVGs/iconJs";
 import IconReact from "@/components/SVGs/iconReact";
 import IconTailwind from "@/components/SVGs/iconTailwind";
 import IconSass from "./SVGs/iconSass";
+import IconJava from "./SVGs/iconJava";
+import IconNext from "./SVGs/iconNext";
+import IconNode from "./SVGs/iconNode";
 
 const Carousel = () => {
   return (
@@ -32,22 +35,22 @@ const Carousel = () => {
         className="w-80 flex items-center justify-center"
       >
         <SwiperSlide>
-          <IconHtml />
-        </SwiperSlide>
-        <SwiperSlide>
-          <IconCss />
-        </SwiperSlide>
-        <SwiperSlide>
           <IconJs />
         </SwiperSlide>
         <SwiperSlide>
-          <IconReact />
+          <IconNext />
         </SwiperSlide>
         <SwiperSlide>
           <IconSass />
         </SwiperSlide>
         <SwiperSlide>
           <IconTailwind />
+        </SwiperSlide>
+        <SwiperSlide>
+          <IconJava />
+        </SwiperSlide>
+        <SwiperSlide>
+          <IconNode />
         </SwiperSlide>
       </Swiper>
     </>
