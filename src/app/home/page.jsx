@@ -10,7 +10,7 @@ import React from "react";
 
 function HomeMain() {
   return (
-    <Card className="w-screen max-h-screen bg-[#212529]">
+    <Card className="max-h-screen bg-[#212529]">
       <Card
         className="flex flex-col justify-center p-16 bg-[#212529]"
         style={{

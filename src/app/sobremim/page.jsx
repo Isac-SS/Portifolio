@@ -6,8 +6,8 @@ import { Card } from "@/components/ui/card";
 
 const AboutMe = () => {
   return (
-    <Card className="w-screen min-h-screen flex flex-col items-center justify-center bg-[#212529]" id="second-section">
-      <div class="relative flex items-center justify-center p-24">
+    <Card className="min-h-screen flex flex-col items-center justify-center bg-[#212529]" id="second-section">
+      <div className="relative flex items-center justify-center p-24">
         <h2 className="absolute text-8xl p-3 md:text-6xl xl:text-9xl font-bold text-[#6c757d] opacity-10 select-none">SOBRE MIM</h2>
         <p className="relative text-4xl font-semibold text-[#FAFAFAE6]">Um pouco mais sobre mim</p>
       </div>
