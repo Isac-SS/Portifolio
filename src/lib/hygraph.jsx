@@ -1,9 +1,9 @@
 import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
 
 const client = new ApolloClient({
-  uri: process.env.HYGRAPH_API_URL,
+  uri: process.env.NEXT_PUBLIC_HYGRAPH_API_URL,
   headers: {
-    Authorization: `Bearer ${process.env.HYGRAPH_API_TOKEN}`,
+    Authorization: `Bearer ${process.env.NEXT_PUBLIC_HYGRAPH_API_TOKEN}`,
   },
   cache: new InMemoryCache(),
 });
@@ -12,8 +12,10 @@ export const GET_PROJECTS = gql`
   query GetProjects {
     projetos {
       id
-      title
       category
+      title
+      description
+      technologies
       image {
         url
       }
@@ -22,6 +24,11 @@ export const GET_PROJECTS = gql`
 `;
 
 export const fetchProjects = async () => {
-  const { data } = await client.query({ query: GET_PROJECTS });
-  return data.projects;
+  try {
+    const { data } = await client.query({ query: GET_PROJECTS });
+    return data?.projetos || [];
+  } catch (error) {
+    console.error("Erro ao buscar projetos:", error);
+    return [];
+  }
 };
