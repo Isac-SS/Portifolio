@@ -16,6 +16,8 @@ export const GET_PROJECTS = gql`
       title
       description
       technologies
+      url
+      githubUrl
       image {
         url
       }
