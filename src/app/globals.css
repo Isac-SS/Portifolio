@@ -6,3 +6,7 @@
 /* body {
     background-color: #f034bc;
 } */
+
+html {
+    scroll-behavior: smooth;
+  }
