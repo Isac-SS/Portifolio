@@ -16,8 +16,6 @@ export default function Projetos() {
       try {
         setLoading(true);
         const data = await fetchProjects();
-        console.log("Dados recebidos:", data);
-        // Garantir que data é um array, mesmo que vazio
         setProjects(Array.isArray(data) ? data : []);
       } catch (err) {
         console.error("Erro ao buscar projetos:", err);
@@ -38,16 +36,19 @@ export default function Projetos() {
       : [];
 
   return (
-    <div className="min-h-screen bg-gray-950 text-white py-16 px-4 sm:px-6 lg:px-8">
+    <div
+      className="min-h-screen bg-gray-950 text-white py-16 px-4 sm:px-6 lg:px-8"
+      id="projetos"
+    >
       <div className="max-w-7xl mx-auto">
-        <h1 className="text-4xl font-bold text-center mb-4">Meu Portfólio</h1>
+        <h1 className="text-4xl font-bold text-center mb-4">MEUS PROJETOS</h1>
         <p className="text-gray-400 text-center mb-12 max-w-2xl mx-auto">
           Confira meus projetos mais recentes e descubra as tecnologias que
           utilizo para criar soluções inovadoras.
         </p>
 
         <Filter
-          categories={["Todos", "Sistemas Web", "Aplicativos"]}
+          categories={["Todos", "Web", "Mobile"]}
           activeCategory={activeCategory}
           setActiveCategory={setActiveCategory}
         />
