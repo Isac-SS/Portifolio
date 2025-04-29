@@ -1,51 +1,92 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { Card } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { motion } from "framer-motion"
-import { Terminal, Mail, Send, Github, Linkedin, Twitter, Instagram, Copy, CheckCheck, ExternalLink } from 'lucide-react'
+import { useEffect, useState } from "react";
+import { Card } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { motion } from "framer-motion";
+import {
+  Terminal,
+  Mail,
+  Send,
+  Github,
+  Linkedin,
+  Twitter,
+  Instagram,
+  Copy,
+  CheckCheck,
+  ExternalLink,
+} from "lucide-react";
+import emailjs from "@emailjs/browser";
 
 const Contatos = () => {
-  const [name, setName] = useState("")
-  const [email, setEmail] = useState("")
-  const [message, setMessage] = useState("")
-  const [copied, setCopied] = useState(false)
-  const [sending, setSending] = useState(false)
-  const [sent, setSent] = useState(false)
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [copied, setCopied] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [sent, setSent] = useState(false);
 
-  const contactEmail = "isacribeiro147@gmail.com"
+  const contactEmail = "isacribeiro147@gmail.com";
 
   const copyToClipboard = () => {
-    navigator.clipboard.writeText(contactEmail)
-    setCopied(true)
-    setTimeout(() => setCopied(false), 2000)
-  }
+    navigator.clipboard.writeText(contactEmail);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
 
   const handleSubmit = async (e) => {
-    e.preventDefault()
-    setSending(true)
+    e.preventDefault();
+    setSending(true);
 
-    // Simulação de envio - aqui você implementaria a integração real
-    await new Promise((resolve) => setTimeout(resolve, 1500))
+    try {
+      const serviceId = process.env.NEXT_PUBLIC_SERVICE_ID;
+      const templateId = process.env.NEXT_PUBLIC_TEMPLATE_ID;
+      const publicKey = process.env.NEXT_PUBLIC_PUBLIC_KEY;
 
-    setSending(false)
-    setSent(true)
-    setName("")
-    setEmail("")
-    setMessage("")
+      console.log("Public Key:", process.env.NEXT_PUBLIC_PUBLIC_KEY);
+      console.log("Service ID:", process.env.NEXT_PUBLIC_SERVICE_ID);
+      console.log("Template ID:", process.env.NEXT_PUBLIC_TEMPLATE_ID);
 
-    setTimeout(() => setSent(false), 3000)
-  }
+      const templateParams = {
+        from_name: name,
+        from_email: email,
+        message: message,
+        to_name: "Seu nome",
+        reply_to: email,
+      };
+
+      await emailjs.send(serviceId, templateId, templateParams, publicKey);
+
+      setSending(false);
+      setSent(true);
+      setName("");
+      setEmail("");
+      setMessage("");
+
+      setTimeout(() => setSent(false), 3000);
+    } catch (error) {
+      console.error("Erro ao enviar mensagem: ", error);
+      setSending(false);
+    }
+  };
+
+  useEffect(() => {
+    emailjs.init(process.env.NEXT_PUBLIC_PUBLIC_KEY);
+  });
 
   return (
-    <Card className="min-h-screen flex flex-col items-center justify-center bg-[#121620] py-16" id="contatos">
+    <Card
+      className="min-h-screen flex flex-col items-center justify-center bg-[#121620] py-16"
+      id="contatos"
+    >
       <div className="container mx-auto px-4">
         <div className="relative flex flex-col items-center justify-center mb-12">
-          <h2 className="absolute text-8xl md:text-9xl font-bold text-[#6c757d] opacity-10 select-none">CONTATO</h2>
+          <h2 className="absolute text-8xl md:text-9xl font-bold text-[#6c757d] opacity-10 select-none">
+            CONTATO
+          </h2>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -74,7 +115,9 @@ const Contatos = () => {
                   <div className="w-3 h-3 rounded-full bg-[#FFBD2E]"></div>
                   <div className="w-3 h-3 rounded-full bg-[#27C93F]"></div>
                 </div>
-                <span className="text-[#8A94A8] text-sm ml-2">new-message.sh</span>
+                <span className="text-[#8A94A8] text-sm ml-2">
+                  new-message.sh
+                </span>
               </div>
               <div className="p-6 font-mono">
                 <div className="flex items-center gap-2 text-[#8A94A8] mb-4">
@@ -166,7 +209,9 @@ const Contatos = () => {
                 <h3 className="text-[#FAFAFAE6] font-medium">Email</h3>
               </div>
               <div className="flex items-center justify-between">
-                <p className="text-[#8A94A8] text-sm truncate">{contactEmail}</p>
+                <p className="text-[#8A94A8] text-sm truncate">
+                  {contactEmail}
+                </p>
                 <div className="flex gap-2">
                   <Button
                     variant="ghost"
@@ -206,7 +251,9 @@ const Contatos = () => {
                   variant="outline"
                   size="icon"
                   className="rounded-md bg-[#2A3441] border-[#343F4F] hover:bg-[#343F4F] hover:text-white"
-                  onClick={() => window.open("https://github.com/seu-usuario", "_blank")}
+                  onClick={() =>
+                    window.open("https://github.com/Isac-SS", "_blank")
+                  }
                 >
                   <Github className="h-5 w-5" />
                 </Button>
@@ -214,44 +261,26 @@ const Contatos = () => {
                   variant="outline"
                   size="icon"
                   className="rounded-md bg-[#2A3441] border-[#343F4F] hover:bg-[#343F4F] hover:text-white"
-                  onClick={() => window.open("https://linkedin.com/in/seu-usuario", "_blank")}
+                  onClick={() =>
+                    window.open(
+                      "https://www.linkedin.com/in/isac-s-s/",
+                      "_blank"
+                    )
+                  }
                 >
                   <Linkedin className="h-5 w-5" />
                 </Button>
-                <Button
-                  variant="outline"
-                  size="icon"
-                  className="rounded-md bg-[#2A3441] border-[#343F4F] hover:bg-[#343F4F] hover:text-white"
-                  onClick={() => window.open("https://twitter.com/seu-usuario", "_blank")}
-                >
-                  <Twitter className="h-5 w-5" />
-                </Button>
-                <Button
-                  variant="outline"
-                  size="icon"
-                  className="rounded-md bg-[#2A3441] border-[#343F4F] hover:bg-[#343F4F] hover:text-white"
-                  onClick={() => window.open("https://instagram.com/seu-usuario", "_blank")}
-                >
-                  <Instagram className="h-5 w-5" />
-                </Button>
               </div>
             </Card>
-
-            {/* <Card className="bg-[#1E2736] border-[#2A3441] shadow-xl p-5 rounded-xl">
-              <div className="flex items-center gap-3 mb-3">
-                <div className="bg-[#f0340b30] p-2 rounded-lg">
-                  <Send className="text-[#f0340bc7] h-5 w-5" />
-                </div>
-                <h3 className="text-[#FAFAFAE6] font-medium">Resposta</h3>
-              </div>
-              <p className="text-[#8A94A8] text-sm">Respondo todas as mensagens em até 24 horas nos dias úteis.</p>
-            </Card> */}
-
             <Card className="bg-[#1E2736] border-[#2A3441] shadow-xl p-5 rounded-xl">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-2">
-                  <Badge className="bg-[#27C93F] text-white border-none">Online</Badge>
-                  <p className="text-[#8A94A8] text-sm">Disponível para novos projetos</p>
+                  <Badge className="bg-[#27C93F] text-white border-none">
+                    Online
+                  </Badge>
+                  <p className="text-[#8A94A8] text-sm">
+                    Disponível para novos projetos
+                  </p>
                 </div>
               </div>
             </Card>
@@ -259,7 +288,7 @@ const Contatos = () => {
         </div>
       </div>
     </Card>
-  )
-}
+  );
+};
 
-export default Contatos
+export default Contatos;
