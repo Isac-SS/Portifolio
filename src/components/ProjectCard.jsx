@@ -51,7 +51,7 @@ const ProjectCard = ({ project }) => {
 
         <div className="mt-4 flex items-center gap-3">
           <a
-            href={project.liveUrl || "#"}
+            href={project.url || "#"}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-1 text-sm font-medium text-white hover:text-gray-300 transition-colors"
