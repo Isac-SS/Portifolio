@@ -135,7 +135,7 @@ function HomeMain() {
 
               <Button
                 variant="outline"
-                className="border-white/20 hover:bg-white/10 text-white px-8 py-6 rounded-lg font-medium text-lg transition-all hover:scale-105"
+                className="border-white/20 bg-white/10 text-white hover:bg-white/20 px-8 py-6 rounded-lg font-medium text-lg transition-all hover:scale-105"
                 asChild
               >
                 <Link href="/contato">Contato</Link>
