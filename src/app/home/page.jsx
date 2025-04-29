@@ -1,5 +1,4 @@
 "use client";
-import TitleHome from "@/components/Title";
 import { Button } from "@/components/ui/button";
 import {
   Linkedin,
