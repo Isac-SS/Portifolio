@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { fetchProjects } from "@/lib/hygraph";
 import Filter from "@/components/Filter";
 import ProjectCard from "@/components/ProjectCard";
 
@@ -15,7 +14,9 @@ export default function Projetos() {
     async function getProjects() {
       try {
         setLoading(true);
-        const data = await fetchProjects();
+        const response = await fetch("/api/projects");
+        if (!response.ok) throw new Error("Falha na requisição");
+        const data = await response.json();
         setProjects(Array.isArray(data) ? data : []);
       } catch (err) {
         console.error("Erro ao buscar projetos:", err);
