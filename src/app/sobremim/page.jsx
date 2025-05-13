@@ -19,7 +19,7 @@ const AboutMe = () => {
   const [displayedText, setDisplayedText] = useState("");
 
   const fullText =
-    "Eu sou o Isac Santos de Sá e estou no mercado a 3 anos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, nisi! Alias officiis ducimus, id perferendis minima corporis, possimus quisquam cupiditate laboriosam temporibus deserunt inventore magni quaerat explicabo tempora repellendus incidunt? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero reiciendis accusantium distinctio eveniet aperiam qui quae doloribus praesentium molestias quia. Repellat vel ad obcaecati nihil natus ab adipisci eius aspernatur.";
+    "Olá! Me chamo Isac Santos de Sá e atuo na área de tecnologia desde 2022. Sou formado em Análise e Desenvolvimento de Sistemas e, ao longo da minha jornada, tive a oportunidade de compartilhar conhecimento em palestras voltadas para formandos de cursos de tecnologia, reforçando meu compromisso com o aprendizado contínuo e a colaboração. Iniciei minha carreira com um estágio no Ministério do Meio Ambiente, onde atuei como desenvolvedor web. Em seguida, trabalhei na empresa ENSTI, onde ampliei meu conhecimento backend com Java e Node.js, e tive maior contato com SQL, integrando uma equipe responsável por escalar a plataforma SICLUS para mais de 600 AABBs e mais de 1 milhão de usuários, enfrentando desafios que fortaleceram minha base técnica. Mais recentemente, atuei como desenvolvedor fullstack na Contrictor Tecnologia, utilizando Angular e NestJS para desenvolver soluções robustas e escaláveis. Tenho facilidade em me comunicar e um bom entrosamento com equipes, sempre buscando contribuir com soluções eficientes  manter um ambiente de trabalho colaborativo.";
 
   useEffect(() => {
     if (currentTextIndex < fullText.length && typing) {
@@ -35,15 +35,17 @@ const AboutMe = () => {
   }, [currentTextIndex, typing, fullText]);
 
   const skills = [
+    "Angular",
     "React",
     "Next.js",
     "TypeScript",
+    "Java",
+    "Express",
     "Node.js",
+    "SCSS",
     "Tailwind CSS",
     "MongoDB",
     "PostgreSQL",
-    "Express",
-    "Docker",
     "Git",
   ];
 
@@ -142,8 +144,8 @@ const AboutMe = () => {
                 <h3 className="text-[#FAFAFAE6] font-medium">Perfil</h3>
               </div>
               <p className="text-[#8A94A8] text-sm">
-                Desenvolvedor apaixonado por criar soluções digitais com foco em
-                experiência do usuário e código limpo.
+                Proativo - Comunicativo - Comprometido - Adaptável -
+                Colaborativo
               </p>
             </Card>
 
@@ -165,15 +167,16 @@ const AboutMe = () => {
                 <div className="bg-[#f0340b30] p-2 rounded-md">
                   <Code className="text-[#f0340bc7] h-5 w-5" />
                 </div>
-                <h3 className="text-[#FAFAFAE6] font-medium">Tecnologias</h3>
+                <h3 className="text-[#FAFAFAE6] font-medium">
+                  Principais tecnologias
+                </h3>
               </div>
               <p className="text-[#8A94A8] text-sm">
-                Especializado em React, Next.js, Node.js e outras tecnologias
-                modernas para desenvolvimento web.
+                Angular | React | Next | Node
               </p>
             </Card>
 
-            <Card className="bg-[#1E2736] border-[#2A3441] shadow-xl p-5 rounded-xl">
+            {/* <Card className="bg-[#1E2736] border-[#2A3441] shadow-xl p-5 rounded-xl">
               <div className="flex items-center gap-3 mb-3">
                 <div className="bg-[#f0340b30] p-2 rounded-md">
                   <Briefcase className="text-[#f0340bc7] h-5 w-5" />
@@ -186,7 +189,7 @@ const AboutMe = () => {
                 </p>
                 <ChevronRight className="text-[#f0340bc7] h-4 w-4" />
               </div>
-            </Card>
+            </Card> */}
           </motion.div>
         </div>
       </div>

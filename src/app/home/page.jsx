@@ -32,26 +32,20 @@ const icons = [
       "hover:text-[#f0340b] hover:scale-125 transition-all duration-300 ease-in-out",
     icon: Linkedin,
   },
-  {
-    href: "https://judge.beecrowd.com/pt/profile/676304",
-    size: 24,
-    label: "Beecrownd",
-    style:
-      "hover:text-[#f0340b] hover:scale-125 transition-all duration-300 ease-in-out",
-    icon: Linkedin,
-  },
 ];
 
 const technologies = [
+  "Angular",
   "React",
   "Next.js",
   "TypeScript",
+  "Java",
+  "Express",
   "Node.js",
+  "SCSS",
   "Tailwind CSS",
   "MongoDB",
   "PostgreSQL",
-  "Express",
-  "Docker",
   "Git",
 ];
 
@@ -107,8 +101,8 @@ function HomeMain() {
             transition={{ duration: 0.8 }}
             className="space-y-6"
           >
-            <div className="inline-block bg-gradient-to-r from-red-500 to-orange-500 px-4 py-1 rounded-full text-sm font-medium mb-2">
-              Fullstack Developer
+            <div className="inline-block bg-gradient-to-r from-red-500 to-orange-500 px-4 py-1 rounded-full text-lg font-medium mb-2">
+              Isac Santos de Sá
             </div>
 
             <h1 className="text-5xl md:text-7xl font-bold">
