@@ -18,6 +18,8 @@ export default function Projetos() {
         if (!response.ok) throw new Error("Falha na requisição");
         const data = await response.json();
         setProjects(Array.isArray(data) ? data : []);
+
+        console.log("Projetos carregados:", data);
       } catch (err) {
         console.error("Erro ao buscar projetos:", err);
         setError("Falha ao carregar projetos");
@@ -44,19 +46,18 @@ export default function Projetos() {
       <div className="max-w-7xl mx-auto">
         <h1 className="text-4xl font-bold text-center mb-4">MEUS PROJETOS</h1>
         <p className="text-gray-400 text-center mb-12 max-w-2xl mx-auto">
-          Confira meus projetos mais recentes e descubra as tecnologias que
-          utilizo para criar soluções inovadoras.
+          Confira alguns dos meus projetos.
         </p>
 
         <Filter
-          categories={["Todos", "Web", "Mobile"]}
+          categories={["Todos", "Web", "Mobile", "Api"]}
           activeCategory={activeCategory}
           setActiveCategory={setActiveCategory}
         />
 
         {loading ? (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
-            {[1, 2, 3].map((i) => (
+            {[1, 2, 3, 4, 5, 6].map((i) => (
               <div
                 key={i}
                 className="rounded-xl bg-gray-900 border border-gray-800 h-96 animate-pulse"
