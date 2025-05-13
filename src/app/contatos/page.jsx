@@ -83,8 +83,8 @@ const Contatos = () => {
       id="contatos"
     >
       <div className="container mx-auto px-4">
-        <div className="relative flex flex-col items-center justify-center mb-12">
-          <h2 className="absolute text-8xl md:text-9xl font-bold text-[#6c757d] opacity-10 select-none">
+        <div className="relative flex flex-col items-center justify-center mb-12 overflow-hidden">
+          <h2 className="absolute text-5x1 sm:text-6xl md:text-8xl lg:text-9x1 font-bold text-[#6c757d] opacity-10 select-none max-w-full overflow-hidden">
             CONTATO
           </h2>
           <motion.div

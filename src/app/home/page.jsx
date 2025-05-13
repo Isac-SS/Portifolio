@@ -199,12 +199,12 @@ function HomeMain() {
             </div>
 
             {/* Elementos decorativos */}
-            <div className="absolute top-10 -right-10 w-40 h-40 bg-red-500/20 rounded-full blur-3xl"></div>
-            <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-orange-500/20 rounded-full blur-3xl"></div>
+            <div className="absolute top-10 right-0 md:-right-10 w-20 h-20 md:w-40 md:h-40 bg-red-500/20 rounded-full blur-3xl"></div>
+            <div className="absolute -bottom-10 left-0 md:-left-10 w-20 h-20 md:w-40 md:h-40 bg-orange-500/20 rounded-full blur-3xl"></div>
 
             {/* Ícones flutuantes */}
             <motion.div
-              className="absolute -top-5 -left-5 bg-gray-800/80 p-3 rounded-xl border border-gray-700"
+              className="absolute -top-5 left-0 md:left-5 bg-gray-800/80 p-2 rounded-xl border border-gray-700"
               animate={{ y: [0, -10, 0] }}
               transition={{ repeat: Number.POSITIVE_INFINITY, duration: 3 }}
             >
@@ -212,7 +212,7 @@ function HomeMain() {
             </motion.div>
 
             <motion.div
-              className="absolute top-1/2 -right-5 bg-gray-800/80 p-3 rounded-xl border border-gray-700"
+              className="absolute top-1/2 right-0 md:right-5 bg-gray-800/80 p-2 rounded-xl border border-gray-700"
               animate={{ y: [0, 10, 0] }}
               transition={{ repeat: Number.POSITIVE_INFINITY, duration: 4 }}
             >
@@ -220,7 +220,7 @@ function HomeMain() {
             </motion.div>
 
             <motion.div
-              className="absolute -bottom-5 left-1/3 bg-gray-800/80 p-3 rounded-xl border border-gray-700"
+              className="absolute -bottom-5 left-1/4 md:left-1/3 bg-gray-800/80 p-2 md:p-3 rounded-xl border border-gray-700"
               animate={{ y: [0, -15, 0] }}
               transition={{ repeat: Number.POSITIVE_INFINITY, duration: 5 }}
             >
