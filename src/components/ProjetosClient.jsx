@@ -4,8 +4,8 @@ export const revalidate = 60;
 
 async function getProjects() {
   const res = await fetch("/api/projects", {
-  next: { revalidate: 60 },
-})
+    next: { revalidate: 60 },
+  });
 
   if (!res.ok) throw new Error("Erro ao buscar projetos");
 
@@ -21,9 +21,7 @@ export default async function Projetos() {
       id="projetos"
     >
       <div className="max-w-7xl mx-auto">
-        <h1 className="text-4xl font-bold text-center mb-4">
-          MEUS PROJETOS
-        </h1>
+        <h1 className="text-4xl font-bold text-center mb-4">MEUS PROJETOS</h1>
 
         <p className="text-gray-400 text-center mb-12 max-w-2xl mx-auto">
           Confira alguns dos meus projetos.
